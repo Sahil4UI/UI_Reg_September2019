@@ -1,0 +1,58 @@
+/* global settings */
+body{
+    margin:0;
+    font-family: 'Titillium Web', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    margin-top:0;
+}
+/* helper class */
+.left
+{
+    float:left;
+}
+.right{
+    float:right;
+}
+.clear:after{
+content:"";
+clear:both;
+display: block;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    padding:0;
+    margin:0;
+    list-style-type: none;
+}
+
+.w-100{
+    width:100%;
+}
+/* Header section */
+#header {
+    background-color: #062F4D;
+    }
+#header a{
+    color:#fff;
+}
+#header .list ul li{
+    display: inline-block;
+}
+#header .list ul li a{
+    text-transform: uppercase;
+
+}
+#header .Image{
+    width:10%;
+}
+#header .list{
+    width:70%;
+}
+#header .menu{
+    width:10%;
+}
