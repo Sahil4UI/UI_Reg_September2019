@@ -1,0 +1,177 @@
+body{
+    margin:0;
+    background-image: url('https://thewallpaper.co//wp-content/uploads/2016/10/hd-4k-wallpaper-collection-download-cool-background-photos-windows-wallpapers-smart-phone-background-photos-download-free-images-desktop-backgrounds-ultra-hd-3840x2160.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height:700px;
+    overflow:hidden;
+    
+}
+h1,h2,h3,h4,h5,h6,p
+{
+    margin:0;
+
+}
+ul{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
+a{
+    text-decoration: none;
+}
+/* helper class */
+.w-100{
+    width:100%;
+}
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}
+.clearfix:after{
+    content:"";
+    display: block;
+    clear:both;
+}
+#book-card-container{
+    width:400px;
+    margin:0 auto;
+    height:500px;
+    margin-top:50px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 2000px;
+
+}
+.left-side,.right-side,.mid-side{
+    width:100%;
+    height: 100%;
+    position: absolute;
+}
+
+.l-front,.l-back,.r-front,.r-back{
+width:inherit;
+height:inherit;
+position: absolute;
+
+}
+.l-back,.r-back{
+    pointer-events: none;
+}
+.left-side{
+    z-index:1000;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: 3s;
+}
+.right-side{
+    transform-style: preserve-3d;
+    transform-origin: right;
+    z-index:700;
+    transition: 1s;
+}
+.l-front{
+    
+    z-index:900;
+    backface-visibility: hidden;
+    background-image: url("http://themes.pixelwars.org/bookcard-wp/wp-content/uploads/2013/04/cover.jpg");
+    background-size: 100% 100%;
+    
+}
+.l-back{
+    background-color: cyan;
+    z-index:800;
+    transform:rotateY(180deg);
+}
+.mid-side{
+    background-color:cornflowerblue;
+    z-index:10;
+}
+.r-front{
+    background-color: yellow;
+   z-index:600;
+    backface-visibility: hidden;
+}
+
+.r-back{
+    background-color: violet;
+    z-index:500;
+    transform:rotateY(180deg);
+
+}
+
+input[value="open"]:checked ~ .left-side{
+    transition-duration: 2s;
+    transform:rotateY(-180deg);
+}
+
+
+input[value="open"]:checked ~ .right-side{
+    transition-duration: 2s;
+    transform:rotateY(180deg);
+    transition-delay: 2s;
+}
+.wrapper{
+    padding:18px 10px;
+}
+.Heading{
+    text-align: center;
+    color:#fff;
+}
+.Heading h1{
+    font-size:50px;
+    font-family: "Alfa Slab One",cursive;
+    text-shadow: -7px 2px 10px red
+}
+.Heading p{
+    font-weight:normal;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: "Nixie One";
+}
+.intro{
+    margin-top:30px;
+}
+.intro span{
+display: block;
+
+}
+.intro ul li{
+    margin-bottom:15px;
+}
+.intro p{
+color:#fff;
+font-family: "Nixie One";
+font-size:22px;
+text-shadow: 2px 2px #000;
+}
+.intro  h3{
+    color:#FC0;
+    text-shadow:2px 2px black;
+}
+
+.social h3{
+color:#fff;
+background-color: #000;
+display: inline-block;
+
+padding:10px 50px 10px 10px;
+font-size:15px;
+font-weight: 100;
+}
+.social {
+    margin-left:-10px;
+}
+.social a{
+    color:#fff;
+    
+    font-size:12px;
+}
+input[value="open"]{
+    position: absolute;
+    z-index:200000;
+    left:90%;
+    top:50%;
+}
