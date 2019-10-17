@@ -62,6 +62,9 @@ height:inherit;
 position: absolute;
 
 }
+.l-back,.r-back,.mid-side{
+    overflow-y: scroll;
+}
 .r-back{
     pointer-events: none;
 }
@@ -86,24 +89,54 @@ position: absolute;
     overflow: hidden;
 }
 .l-back{
-    background-color: #fff;
+    background-color: #fafafa;
     z-index:800;
     transform:rotateY(180deg);
-    overflow-y: scroll;
+    
   
 }
 .mid-side{
-    background-color:cornflowerblue;
+    background-color:#fafafa;
     z-index:10;
 }
+.mid-side nav ul{
+    text-align: center;
+}
+.mid-side nav ul li{
+    display:inline-block;
+    margin:0 4px;
+    
+}
+.l-back::-webkit-scrollbar{
+ width:5px;   
+    
+}
+.l-back::-webkit-scrollbar-track{
+    background-color:transparent;
+}
+.l-back::-webkit-scrollbar-thumb:vertical{
+    background-color: #999;
+}
+/* scroll-bar-button css */
+/* .l-back::-webkit-scrollbar-button{
+    background-color: blue;
+} */
+.active {
+    color:#000!important;
+    border-bottom:4px solid #333;
+}
+
+.mid-side nav ul li a{
+    color:#999;
+}
 .r-front{
-    background-color: yellow;
+    background-color: #fafafa;
    z-index:600;
     backface-visibility: hidden;
 }
 
 .r-back{
-    background-color: violet;
+    background-color: #fafafa;
     z-index:500;
     transform:rotateY(180deg);
 
@@ -336,4 +369,44 @@ width:65%;
         top: -86px;
     left: 44%;
     height: 66px
+    }
+    @media (max-width:768px)
+    {   body
+        {
+        overflow-y: visible;
+    }
+        .left-side,.right-side,.mid-side,.l-front,.l-back,.r-front,.r-back{
+            position: static;
+            height:unset;
+            width:100%;
+        }
+        .r-front
+        {
+            display:none;
+        }
+        .l-back,.r-back
+        {
+            transform:rotateY(0deg)
+        }
+        #book-card-container:hover .left-side{
+            transform:none; 
+            transition: none;
+        }
+        #book-card-container{
+            position: static;
+            height:unset;
+            width:100%;
+            margin:0;
+        }
+        #book-card-container:hover .right-side{
+            transform:none;
+            transition: none; 
+        }
+        .l-back,.mid-side,.r-back{
+            overflow-Y:visible;
+        }
+        .book-mark{
+            display: none;
+        }
+
     }
