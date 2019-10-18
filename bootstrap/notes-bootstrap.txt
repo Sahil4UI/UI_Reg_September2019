@@ -1,0 +1,36 @@
+bootstrap - rwf - responsive web framework
+
+sass - advance css - function,if-else
+sass - syntactically awesome style sheet
+css3 -popular - sass
+
+
+bootstrap -framework -top
+pure css
+foundation
+
+
+bootstrap classes
+1.container - padding-left-right -15px margin-auto-r/l
+2. container-fluid 
+3.list-group- ul
+	list-group-item - li
+
+Grid system
+Responsive column alignment
+col-xl-*     - 1200px
+col-lg-*	-992px
+col-md-*	-768px
+col-sm-*	-576px
+col-*		below 576px
+
+div - container
+	div-row
+		div-column
+			content
+
+
+
+
+
+
